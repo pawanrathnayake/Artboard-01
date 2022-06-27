@@ -1,0 +1,115 @@
+$breakpoints: (
+  "xl":1200px,
+  "lg": 960px,
+  "md": 720px,
+  "sm": 480px,
+  "xs": 0, 
+);
+
+
+@mixin xl {
+    @media ( min-width: map-get( $breakpoints,"xl" ) ) {
+      @content; 
+    }   
+}
+
+@mixin lg {
+    @media  ( min-width: map-get( $breakpoints,"lg" ) )  {
+      @content; 
+    }
+}
+ 
+@mixin xs {
+    @media ( min-width: map-get( $breakpoints,"xs" ) ) {
+      @content;
+    }
+}
+  
+@mixin  md {
+    @media ( min-width: map-get( $breakpoints,"md" ) ) {
+      @content;
+    }  
+}
+
+@mixin sm {
+    @media ( min-width: map-get( $breakpoints,"sm" ) ) {
+      @content;
+    }  
+}
+
+@mixin breakpoint( $bp: 0 ) {
+  @media ( min-width: $bp ) {
+    @content;
+  }
+}
+// .image-food__rect {
+//   @include xs {
+//     width: 100%;
+//   }
+//   @include sm {
+//     width: 100%;
+//   }
+//   @include md {
+//     width: 50%;
+//   }
+//   @include lg {
+//     width: 50%;
+//   }  @include xl {
+//     width: 50%;
+//   }
+// }
+
+// .block {
+//   @include xs {
+//     padding: 24px 16px 46px;
+//   }
+
+//   @include sm {
+//     padding: 24px 16px 46px;
+//   }
+
+//   @include md {
+//     padding: 24px 16px 46px;
+//   }
+
+//   @include lg {
+//     padding: 99px 150px;
+//   }
+
+//   @include xl {
+//     padding: 99px 150px;
+//   }
+// }
+
+// .card {  
+//   @include xs {
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   @include sm {
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   @include md {
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   @include lg {
+//     align-items:flex-start;
+//     display: flex;
+//     flex-direction: row;
+//   }
+
+//   @include xl {
+//     align-items: flex-start;
+//     display: flex;
+//     flex-direction: row;
+//   }
+// }
+

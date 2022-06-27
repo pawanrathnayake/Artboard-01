@@ -1,0 +1,599 @@
+@import 'mixins';
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.first-row {
+    align-items: center;
+    background: $font_dark;
+    color: $sufarce_color;
+    display: flex;
+    height: 40px;
+    justify-content: flex-end;
+    padding: 0px 40px;
+
+    &__navbar-links ul {
+        align-items: center;
+        display: flex;
+    }
+
+    &__navbar-links li {
+        color: $sufarce_color;
+        list-style: none;
+        margin-right: 31px;
+    }
+
+    &__navbar-links li a {
+        color: $sufarce_color;
+        text-decoration: none;
+    }
+    
+}
+.second-row {
+    align-items: center;
+    background-color: $sufarce_color;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px 10px 29px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    @include xs {
+        display: flex;
+        justify-content: center
+    }
+    @include sm {
+        display: flex;
+        justify-content: center;
+    }
+    @include md {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include lg {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include xl {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__brand-title img {
+        display: flex;
+        height: 47px;
+        position: relative;
+        object-fit: cover; 
+        width: 180px;
+
+        @include xs {
+            display: none;
+        }
+        @include sm {
+            display: none;
+        }
+        @include md {
+            display: flex;
+
+        }
+        @include lg {
+            display: flex;
+        }
+        @include xl {
+            display: flex;
+        }
+    }
+
+    &__navbar-links ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+      
+    &__navbar-links li {
+        list-style: none;
+    }
+    
+    &__navbar-links li a {
+        display: block;
+        margin-left: 62px;
+        text-decoration: none;
+
+        @include xs {
+            margin-left: 5px;
+        }
+        @include sm {
+            margin-left: 5px;
+        }
+        @include md {
+            margin-left: 62px;
+        }
+        @include lg {
+            margin-left: 62px;
+        } 
+        @include xl {
+            margin-left: 62px;
+        }
+    }
+      
+    &__navbar-links li a:hover {
+
+        @include xs {
+            
+        }
+        @include sm {
+            
+        }
+        @include md {
+            
+        }
+
+        @include lg {
+            text-decoration-line: overline;
+            text-decoration-style:solid;
+            text-decoration-color: $text_decoration;
+            text-decoration-thickness: 5px
+        }
+        @include xl {
+            text-decoration-line: overline;
+            text-decoration-style:solid;
+            text-decoration-color: $text_decoration;
+        }
+        
+    }
+}
+// .second-row__brand-title::after    {
+//     content: "";
+//     content: "";
+//     position: absolute;
+//     width: 90px;
+//     height: 2px;
+//     background: #509d9d;
+//     top: 50%;
+//     margin: 0 10%;
+// }
+// .toggle-button {
+//     position:absolute;
+//     top: 0.75rem;
+//     right: 1rem;
+//     display: none;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     width: 30px;
+//     height: 21px; 
+// }
+
+// .toggle-button .bar {
+//     height: 3px;
+//     width: 100%;
+//     background-color: azure;
+//     border-radius: 10px;
+// }
+
+/* heading card */
+.card {
+    align-items: center;
+    background: $image_red;
+    text-align: center;
+    text-transform: uppercase;
+
+    &__main {
+        color: $sufarce_color;
+        padding: 112px 323px 125px 323px;
+
+        @include xs {
+            padding: 10px;
+        }
+        @include sm {
+            padding: 10px;
+        }
+        @include md {
+            padding: 10px;
+        }
+        @include lg {
+            padding: 112px 323px 125px 323px;
+        }
+        @include xl {
+            padding: 112px 323px 125px 323px;
+        }
+        
+    }
+}
+/* description Card */
+.des {
+
+    &__description {
+        color: $image_dark;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        padding:  99px 92px 100px 89px;
+        text-align: center;
+
+        @include xs {
+            padding: 23px 34px 22px;
+        }
+        @include sm {
+            padding: 23px 34px 22px;  
+        }
+        @include md {
+            padding: 99px 92px 100px 89px;
+        }
+        @include lg {
+            padding: 99px 92px 100px 89px;     
+        }
+        @include xl {
+            padding: 99px 92px 100px 89px;
+        }
+    }
+}
+
+/* image card */
+.image-mountian {
+    width: 100%;
+    position: relative;
+
+    &__pic{
+        display: block;
+        height: 500px;
+        object-fit:cover;
+        width: 100%;
+    }
+
+    &__rect {
+        color: $sufarce_color;
+        background:  $image_dark;
+        height: 500px;
+        opacity: 0.8;
+        position:absolute ;
+        right: 0;
+        text-align:center;
+        top: 0;
+        width: 50%;
+
+        @include xs {
+            width: 100%;
+        }
+        @include sm {
+            width: 100%;
+        }
+        @include md {
+            width: 50%;
+        }
+        @include lg {
+            width: 50%;
+        }
+        @include xl {
+            width: 50%;
+        }
+    }
+
+    &__heading {
+        color: $sufarce_color;
+        font-size: 30px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: -0.6px;
+        padding: 96px 90px 0;
+
+        @include xs {
+            padding: 40px 10px;  
+
+        }
+        @include sm {
+            padding: 40px 10px;
+            
+        }
+        @include md {
+            padding: 96px 90px 0;
+            
+        }
+        @include lg {
+            padding: 96px 90px 0;
+            
+        }
+        @include xl {
+            padding: 96px 90px 0;
+            
+        }
+    }
+
+    &__des {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.36px;
+        padding: 96px 90px 61px;
+
+        @include xs {
+            padding: 40px 10px;  
+
+        }
+        @include sm {
+            padding: 40px 10px;
+            
+        }
+        @include md {
+            padding: 96px 90px 61px;
+            
+        }
+        @include lg {
+            padding: 96px 90px 61px;
+            
+        }
+        @include xl {
+            padding: 96px 90px 61px;
+            
+        }
+    }
+
+    &__link {
+        color: $font_dark;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.36px;
+        padding: 23px 34px 22px;
+        text-align: center;
+    }
+
+    &__rect a {
+        background: $sufarce_color;
+        color: $font_dark;
+        text-decoration: none;
+    }
+}
+
+/* image card */
+.image-food {
+    position: relative;
+    width: 100%;
+
+    &__pic{
+        display: block;
+        height: 500px;
+        object-fit:cover;
+        width: 100%;
+    }
+
+    &__rect {
+        align-items: center;
+        background: $image_red;
+        color: $sufarce_color;
+        height: 500px;
+        left: 0;
+        opacity: 0.8;
+        position:absolute;
+        text-align: center;
+        top: 0;
+        width: 50%;
+
+        @include xs {
+            width: 100%;
+        }
+        @include sm {
+            width: 100%;
+        }
+        @include md {
+            width: 50%;
+        }
+        @include lg {
+            width: 50%;
+        } 
+        @include xl {
+            width: 50%;
+        }
+    }
+
+    &__heading {
+        color: $sufarce_color;
+        font-size: 30px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: -0.6px;
+        padding: 96px 90px 0;
+        position: relative;
+
+        @include xs {
+            padding: 40px 10px;  
+
+        }
+        @include sm {
+            padding: 40px 10px;
+            
+        }
+        @include md {
+            padding: 96px 90px 0;
+            
+        }
+        @include lg {
+            padding: 96px 90px 0;
+            
+        }
+        @include xl {
+            padding: 96px 90px 0;
+            
+        }
+    }
+
+    // &__heading::after    {
+    //     content: "";
+    //     position: absolute;
+    //     width: 90px;
+    //     height: 2px;
+    //     background: #509d9d;
+    //     bottom: -50%;
+    // }
+
+    &__des {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.36px;
+        padding: 96px 90px 61px;
+
+        @include xs {
+            padding: 40px 10px;  
+
+        }
+        @include sm {
+            padding: 40px 10px;
+            
+        }
+        @include md {
+            padding: 96px 90px 61px;
+            
+        }
+        @include lg {
+            padding: 96px 90px 61px;
+            
+        }
+        @include xl {
+            padding: 96px 90px 61px;
+            
+        }
+    }
+
+    &__link {
+        color: $sufarce_color;
+        padding: 23px 34px 22px;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.36px;
+        text-align: center;
+ 
+        @include xs {
+            padding: 23px 34px 22px;  
+
+        }
+        @include sm {
+            padding: 23px 34px 22px;
+            
+        }
+        @include md {
+            padding: 23px 34px 22px;
+            
+        }
+        @include lg {
+            padding: 23px 34px 22px;
+            margin: 10px;
+            
+        }
+        @include xl {
+            padding: 23px 34px 22px;
+            margin: 10px;
+            
+        }
+    }
+
+    &__rect a {
+        color: $sufarce_color;
+        background:none;
+        border: 3px solid $sufarce_color;
+        text-decoration: none;
+    }
+}
+
+.rectangle-3 { 
+    color: $sufarce_color;
+    background: $font_dark;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    padding: 89px 61px 89px 51px;
+
+    
+    @include xs {
+        display: grid;
+        flex-direction: row;
+    }
+    @include sm {
+        display: grid;
+        flex-direction: row;
+    }
+    @include md {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include lg {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include xl {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+.bottom {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 30px;
+}
+
+/* footer */
+.footer {
+    align-items: center;
+    border-top: 1px solid $boarder_top;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 61px 0px 51px;
+
+    @include xs {
+        flex-direction: column;
+    }
+    @include sm {
+        
+    }
+    @include md {
+        
+    }
+    @include lg {
+        flex-direction: row;
+    }
+    @include xl {
+        flex-direction: row;
+    }
+
+
+    &__links ul {
+        display: flex;
+        padding: 0;
+    }
+    
+    &__links li {
+        color: $font_dark;
+        font-size: 14px;
+        list-style: none;
+        line-height: 1.86;
+        padding: 10px 10px 10px 0;
+    }
+
+    &__span {
+        color: $font_dark;
+        font-size: 14px;
+        line-height: 1.86;
+    }
+}
